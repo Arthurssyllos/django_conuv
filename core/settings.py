@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-_20@n+#e8--h5_2$vyti@h)y9is+8vmokz$6p^-@bf1b9rik8i
 DEBUG = os.environ.get('PRODUCTION_ENVIRONMENT', '').lower() != 'true'
 
 ALLOWED_HOSTS = [
-    os.environ.get('APP_ADDRESS', '').lower(),
+    os.environ.get('APP_ADDRESS=django-conuv.onrender.com', '').lower(),
     'localhost',
     '127.0.0.1'
 ]
@@ -87,7 +87,6 @@ if not DEBUG:
     }
 
 else:
-
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
